@@ -1,6 +1,8 @@
 \documentclass[ngerman,compress,hyperref={bookmarks}]{beamer}
 \usetheme{Antibes}
 \useoutertheme{infolines}
+
+\usepackage[T1]{fontenc}
 \usepackage[utf8x]{inputenc}
 
 \usepackage{multirow}
@@ -12,26 +14,6 @@
 
 \logo{\includegraphics[height=1cm]{images/logoHAW}}
 \usepackage{graphicx}
-%\usepackage[%
-%	bibstyle=authoryear,%
-%	citestyle=authoryear,%
-%	bibencoding=utf8,%
-%	bibtex8=true,%
-%	sorting=nyt,%
-%	sortcites=true,%
-%	maxnames=2,%
-%	babel=other,%
-%	block=space,%
-%	backref=false,%
-%	natbib=true,%
-%	hyperref=true,%
-%]{biblatex}
-%\bibhang1em
-%\usepackage[style=authortitle-icomp]{biblatex}
-%\bibliography{routing_atlas}
-
-%\setbeamertemplate{bibliography entry title}{}
-%\setbeamertemplate{bibliography entry location}{}
 
 \title[Aktive Messverfahren z. Topologievalidierung]{Aktive Messverfahren zur Topologievalidierung\\ im Routing-Atlas}
 \subtitle{Vortrag: Ringvorlesung Seminar}
@@ -50,24 +32,66 @@
 \section{Intro}
 \subsection{Motivation}
 \begin{frame}{Motivation}
+  \begin{itemize}
+    \item Internet ist kritische Infrastruktur
+    \item Bestrebungen zur Kontrolle (Gesetzgeber, Contentindustrie,\ldots)
+    \item Topologie nicht komplett bekannt
+    \item Beteiligte nicht komplett bekannt
+  \end{itemize}
 \end{frame}
 
-\subsection{Routing Atlas}
-\begin{frame}{Routing Atlas}
+\subsection{Ziel}
+\begin{frame}{Ziel}
+  Entwicklung eines Analysewerkzeugs % „Routing-Atlas“
+  \begin{itemize}
+    \item Zuordnung von Akteuren zu Ländern
+    \item Modellierung der Topologie
+    \item Visualisierung
+  \end{itemize}
+\end{frame}
+
+\subsection{Routing-Atlas}
+\begin{frame}{Routing-Atlas}
+  Ein Projekt der inet AG in Kooperation mit dem BSI
 \end{frame}
 
 \section{Rückblick}
-\subsection{AW1}
-\begin{frame}{AW1}
+\subsection{AW 1}
+\begin{frame}{Anwendungen 1}
+  Vorstellung des Projekts Routing-Atlas\\
+  \begin{itemize}
+    \item Identifikation des „deutschen Internets“
+    \item Bildung des AS Graphen
+    \item Visualisierung
+  \end{itemize}
+  \vspace{0.5cm}
+  Ziel\\
+  \begin{itemize}
+    \item Ersatz für next hop matrix von Winter
+  \end{itemize}
 \end{frame}
 
 \subsection{AW2}
-\begin{frame}{AW2}
+\begin{frame}{Anwendungen 2 - Related Work}
+  Vorstellung vergleichbarer Arbeiten
+  \begin{itemize}
+    \item Passive Messverfahren:
+  \end{itemize}
 \end{frame}
 
 \section{Work in Progress}
 \subsection{Projekt1}
-\begin{frame}{Projekt1}
+\begin{frame}[allowframebreaks]{Projekt1}
+  Ursprüngliches Ziel: Aktualisierung der Topologiemodellierung
+  \begin{itemize}
+    \item Versuchsweise Implementierung von single- und all-pair-shortest-path Algorithmen
+    \item Untersuchung zu Laufzeitverhalten und Speicherverbrauch
+    \item Fazit: Es gibt Tools, die das besser können\\
+    \hspace{0.2cm}z.B. \url{http://www.r-project.org/}
+  \end{itemize}
+  \framebreak
+
+  Jetzt: Validierung und Ergänzung der Topologiemodellierung
 \end{frame}
 
 
