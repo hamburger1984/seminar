@@ -15,7 +15,7 @@
 \logo{\includegraphics[height=1cm]{images/logoHAW}}
 \usepackage{graphicx}
 
-\title[Aktive Messverfahren z. Topologievalidierung]{Aktive Messverfahren zur Topologievalidierung\\ im Routing-Atlas}
+\title[Aktive Messverfahren z. Topologievalidierung]{Aktive Messverfahren zur Topologievalidierung\\im Routing-Atlas}
 \subtitle{Vortrag: Ringvorlesung Seminar}
 \subject{Routing-Atlas, Topology}
 \author{Andreas Krohn}
@@ -31,18 +31,15 @@
 \part{Hauptteil}
 \section{Intro}
 \subsection{Motivation}
-\begin{frame}{Motivation}
+\begin{frame}[allowframebreaks]{Motivation}
   \begin{itemize}
     \item Internet ist kritische Infrastruktur
     \item Bestrebungen zur Kontrolle (Gesetzgeber, Contentindustrie,\ldots)
     \item Topologie nicht komplett bekannt
     \item Beteiligte nicht komplett bekannt
   \end{itemize}
-\end{frame}
-
-\subsection{Ziel}
-\begin{frame}{Ziel}
-  Entwicklung eines Analysewerkzeugs % „Routing-Atlas“
+  \framebreak
+  Entwicklung eines Analysewerkzeugs
   \begin{itemize}
     \item Zuordnung von Akteuren zu Ländern
     \item Modellierung der Topologie
@@ -51,31 +48,69 @@
 \end{frame}
 
 \subsection{Routing-Atlas}
-\begin{frame}{Routing-Atlas}
-  Ein Projekt der inet AG in Kooperation mit dem BSI
+\begin{frame}[allowframebreaks]{Routing-Atlas}
+  Ein Projekt der inet AG in Kooperation mit dem BSI \nocite{wsbh-envgi-12}
+  \begin{itemize}
+    \item Zusammenführung, Validierung und Analyse mehrerer Datenquellen
+    \item Identifikation der Autonomen Systeme eines Landes
+    \item Klassifikation der Autonomen Systeme nach Branche und Hierarchie
+    \item Bildung des verbindenden Routinggraphen
+    \item Visualisierung von Subgraphen
+  \end{itemize}
+  \vspace{0.1cm}
+  {\small
+  \begin{thebibliography}{}
+    \bibitem{wsbh-envgi-12} ``Exposing a Nation-Centric View on the German Internet – A Change in Perspective on the AS Level''
+    \newblock Matthias Wählisch, Thomas C. Schmidt, Markus de Brün, Thomas Häberlen\\
+    \newblock In Proc. of the 13th Passive and Active Measurement Conference (PAM), volume 7192 of LNCS, page 200–210, Berlin Heidelberg, 2012. Springer-Verlag.\\[-20pt]
+  \end{thebibliography}}
+  \framebreak
+  \begin{columns}[c]
+    \begin{column}{0.5\textwidth}
+      \begin{figure}
+        \label{asgraphs}
+        \includegraphics[width=1\textwidth]{images/asgraph_cat5-pos-betweenness}
+      \end{figure}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{figure}
+        \includegraphics[width=1\textwidth]{images/asgraph_cat9-dot}
+      \end{figure}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \section{Rückblick}
 \subsection{AW 1}
-\begin{frame}{Anwendungen 1}
-  Vorstellung des Projekts Routing-Atlas\\
+\begin{frame}{Anwendungen 1, \cite{KrohnAW1}}{Vorstellung des Projekts Routing-Atlas}
+  Aktueller Stand\\
   \begin{itemize}
     \item Identifikation des „deutschen Internets“
-    \item Bildung des AS Graphen
+    \item Bildung des verbindenden AS Graphen über shortest path matrix
     \item Visualisierung
   \end{itemize}
-  \vspace{0.5cm}
+  \vspace{0.3cm}
+  Problemstellung\\
+  \begin{itemize}
+    \item Als Datenquelle verwendetes Projekt eingestellt
+    \item Teils noch manuelle Schritte erforderlich
+  \end{itemize}
+  \vspace{0.3cm}
   Ziel\\
   \begin{itemize}
-    \item Ersatz für next hop matrix von Winter
+    \item Topologiemodellierung (Ersatz für shortest path matrix von Winter)
+    \item Regelmäßige Bereitstellung aktueller Analysen
   \end{itemize}
 \end{frame}
 
 \subsection{AW2}
-\begin{frame}{Anwendungen 2 - Related Work}
-  Vorstellung vergleichbarer Arbeiten
+\begin{frame}{Anwendungen 2, \cite{KrohnAW2}}{Vorstellung vergleichbarer Arbeiten}
+  Verfahren zur Topologieinferenz und -analyse
   \begin{itemize}
-    \item Passive Messverfahren:
+    \item Sammlung von BGP Tabellen und -Updates und Nutzung der IRR-Datenbanken, \cite{Zhang:2005:CIA:1052812.1052825}
+    \item Inferenz von AS Linktypen und Einteilung in tier1, non-tier1-transit, stub, \cite{Gao:2001:IAS:504611.504616}
+    \item Berechnung einer möglichst umfassenden Topologie, \cite{Winter:2009:MIR:1577959.1577976}
+    \item Entdeckung weiterer Peerings mittels traceroute, \cite{Augustin:2009:IM:1644893.1644934}
   \end{itemize}
 \end{frame}
 
@@ -87,16 +122,36 @@
     \item Versuchsweise Implementierung von single- und all-pair-shortest-path Algorithmen
     \item Untersuchung zu Laufzeitverhalten und Speicherverbrauch
     \item Fazit: Es gibt Tools, die das besser können\\
-    \hspace{0.2cm}z.B. \url{http://www.r-project.org/}
+    \hspace{0.3cm}z.B. \url{http://www.r-project.org/}
+  \end{itemize}
+  Nebenbei:
+  \begin{itemize}
+    \item Validierung der Länderzuordnung mittels GeoIP Datenbank
   \end{itemize}
   \framebreak
 
   Jetzt: Validierung und Ergänzung der Topologiemodellierung
+  \begin{itemize}
+    \item Über Kontakte Topologieausschnitt verifizieren (nachfragen)
+    \item Mittels aktiver Verfahren diesen Ausschnitt nachvollziehen
+    \item Vergleich mit modellierter Topologie
+    \item Topologie um Ergebnisse aktiver Messungen ergänzen, sofern sich diese als brauchbar erweisen
+  \end{itemize}
 \end{frame}
 
 
 \section{Ausblick}
 \begin{frame}{Ausblick}
+  Projekt 2
+  \begin{itemize}
+    \item in Projekt 1 entwickelte Validierung bzw. Ergänzung in Routing-Atlas integrieren
+  \end{itemize}
+  \vspace{0.3cm}
+  Außerdem
+  \begin{itemize}
+    \item zunächst Projekt 1 abschließen
+    \item Thema der Masterarbeit konkretisieren
+  \end{itemize}
 \end{frame}
 
 \part{Ende}
@@ -113,10 +168,10 @@
 \end{column}
 \begin{column}{0.5\textwidth}
  \vspace{-1cm}
-%  \begin{figure}
-%   \label{asngraphs2}
-%   \includegraphics[width=\textwidth]{images/asgraph_cat4-pos}
-%  \end{figure}
+ \begin{figure}
+  \label{asngraphs2}
+  \includegraphics[width=\textwidth]{images/asgraph_cat4-pos}
+ \end{figure}
 \end{column}
 \end{columns}
 \end{frame}
@@ -139,18 +194,18 @@
 %       & \multirow{3}{0.8\textwidth}{\url{http://www.cs.ucr.edu/~michalis/},\\ \url{http://www.cse.yorku.ca/cspeople/faculty/pfal/index.html},\\ \url{http://www.cs.cmu.edu/~christos/}} \\
 %       \pageref{faloutsos}& \\
 %       & \\ \hline
-      & \multirow{3}{0.8\textwidth}{\url{http://www.cs.arizona.edu/~bzhang/},\\ \url{http://www.cs.colostate.edu/~massey/},\\ \url{http://www.cs.ucla.edu/~lixia/}} \\
-      \pageref{zhang_et_al} & \\
-      & \\ \hline
+%       & \multirow{3}{0.8\textwidth}{\url{http://www.cs.arizona.edu/~bzhang/},\\ \url{http://www.cs.colostate.edu/~massey/},\\ \url{http://www.cs.ucla.edu/~lixia/}} \\
+%       \pageref{zhang_et_al} & \\
+%       & \\ \hline
 %       & \multirow{3}{0.8\textwidth}{\url{http://www.cs.unm.edu/~karlinjf/},\\ \url{http://www.cs.unm.edu/~forrest/},\\ \url{http://www.cs.princeton.edu/~jrex/}} \\
 %       \pageref{karlin} & \\
 %       & \\ \hline
-      & \multirow{4}{0.8\textwidth}{\url{http://www-rp.lip6.fr/~augustin/},\\ \url{http://www.njit.edu/news/2011/2011-054.php},\\ \url{http://www.research.att.com/people/Willinger_Walter/index.html?fbid=Y-QjC_arIwn}} \\
-      \pageref{augustin} (rechts) & \\
-      & \\ & \\ \hline
-      \pageref{augustin_ixp} (l. unten) & \url{http://www-rp.lip6.fr/~augustin/ixp/imc2009.pdf} \\ \hline
-      \pageref{gao} & \url{http://www-unix.ecs.umass.edu/~lgao/} \\ \hline
-      \pageref{winter} & \url{http://www.hs-augsburg.de/fakultaet/informatik/person/professor/winter_rolf/index.html} \\ \hline
+%       & \multirow{4}{0.8\textwidth}{\url{http://www-rp.lip6.fr/~augustin/},\\ \url{http://www.njit.edu/news/2011/2011-054.php},\\ \url{http://www.research.att.com/people/Willinger_Walter/index.html?fbid=Y-QjC_arIwn}} \\
+%       \pageref{augustin} (rechts) & \\
+%       & \\ & \\ \hline
+%       \pageref{augustin_ixp} (l. unten) & \url{http://www-rp.lip6.fr/~augustin/ixp/imc2009.pdf} \\ \hline
+%       \pageref{gao} & \url{http://www-unix.ecs.umass.edu/~lgao/} \\ \hline
+%       \pageref{winter} & \url{http://www.hs-augsburg.de/fakultaet/informatik/person/professor/winter_rolf/index.html} \\ \hline
     \end{tabular}
   \end{table}
 \end{frame}
