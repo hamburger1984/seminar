@@ -1,4 +1,6 @@
 \documentclass[ngerman,compress,hyperref={bookmarks}]{beamer}
+\usepackage{beamerarticle}
+
 \usetheme{Antibes}
 \useoutertheme{infolines}
 
@@ -14,6 +16,8 @@
 
 \logo{\includegraphics[height=1cm]{images/logoHAW}}
 \usepackage{graphicx}
+
+\usepackage{cite}
 
 \title[Aktive Messverfahren z. Topologievalidierung]{Aktive Messverfahren zur Topologievalidierung\\im Routing-Atlas}
 \subtitle{Vortrag: Ringvorlesung Seminar}
@@ -179,7 +183,11 @@
 \section{Literatur}
 \begin{frame}[plain, allowframebreaks]{Literatur}
 \scriptsize
-\bibliographystyle{alpha}
+% \bibliographystyle{alpha}    % -> [AAAyy]
+% \bibliographystyle{IEEEtran} % -> [n]
+\bibliographystyle{apalike}
+
+
 \bibliography{folien}
 \end{frame}
 
@@ -191,21 +199,6 @@
     \begin{tabular}{ c p{0.8\textwidth} }
       Seite & Quelle \\ \hline
       \pageref{asgraphs}, \pageref{asngraphs2} & \url{http://inet.cpt.haw-hamburg.de/projects/routing-atlas/}\\ \hline
-%       & \multirow{3}{0.8\textwidth}{\url{http://www.cs.ucr.edu/~michalis/},\\ \url{http://www.cse.yorku.ca/cspeople/faculty/pfal/index.html},\\ \url{http://www.cs.cmu.edu/~christos/}} \\
-%       \pageref{faloutsos}& \\
-%       & \\ \hline
-%       & \multirow{3}{0.8\textwidth}{\url{http://www.cs.arizona.edu/~bzhang/},\\ \url{http://www.cs.colostate.edu/~massey/},\\ \url{http://www.cs.ucla.edu/~lixia/}} \\
-%       \pageref{zhang_et_al} & \\
-%       & \\ \hline
-%       & \multirow{3}{0.8\textwidth}{\url{http://www.cs.unm.edu/~karlinjf/},\\ \url{http://www.cs.unm.edu/~forrest/},\\ \url{http://www.cs.princeton.edu/~jrex/}} \\
-%       \pageref{karlin} & \\
-%       & \\ \hline
-%       & \multirow{4}{0.8\textwidth}{\url{http://www-rp.lip6.fr/~augustin/},\\ \url{http://www.njit.edu/news/2011/2011-054.php},\\ \url{http://www.research.att.com/people/Willinger_Walter/index.html?fbid=Y-QjC_arIwn}} \\
-%       \pageref{augustin} (rechts) & \\
-%       & \\ & \\ \hline
-%       \pageref{augustin_ixp} (l. unten) & \url{http://www-rp.lip6.fr/~augustin/ixp/imc2009.pdf} \\ \hline
-%       \pageref{gao} & \url{http://www-unix.ecs.umass.edu/~lgao/} \\ \hline
-%       \pageref{winter} & \url{http://www.hs-augsburg.de/fakultaet/informatik/person/professor/winter_rolf/index.html} \\ \hline
     \end{tabular}
   \end{table}
 \end{frame}
