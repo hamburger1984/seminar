@@ -10,7 +10,7 @@
 \usepackage{multirow}
 
 \usepackage{colortbl}
-\definecolor{dunkelgrau}{rgb}{0.8, 0.8, 0.8}
+\definecolor{darkgray}{rgb}{0.4, 0.4, 0.4}
 
 \usepackage{wasysym}
 
@@ -19,7 +19,9 @@
 
 \usepackage{cite}
 
-\title[Aktive Messverfahren z. Topologievalidierung]{Aktive Messverfahren zur Topologievalidierung\\im Routing-Atlas}
+\usepackage{cancel}
+
+\title[Aktive Messungen zur Validierung]{Aktive Messverfahren zur Topologievalidierung\\im Routing-Atlas}
 \subtitle{Vortrag: Ringvorlesung Seminar}
 \subject{Routing-Atlas, Topology}
 \author{Andreas Krohn}
@@ -43,11 +45,12 @@
     \item Beteiligte nicht komplett bekannt
   \end{itemize}
   \framebreak
-  Entwicklung eines Analysewerkzeugs
+  Entwicklung eines Werkzeugs
   \begin{itemize}
     \item Zuordnung von Akteuren zu Ländern
     \item Modellierung der Topologie
     \item Visualisierung
+    \item \color{darkgray}{Weitere Analysen\ldots}
   \end{itemize}
 \end{frame}
 
@@ -102,14 +105,14 @@
   \vspace{0.3cm}
   Ziel\\
   \begin{itemize}
-    \item Topologiemodellierung (Ersatz für shortest path matrix von Winter)
+    \item Ersatz für shortest path matrix \cite{Winter:2009:MIR:1577959.1577976}
     \item Regelmäßige Bereitstellung aktueller Analysen
   \end{itemize}
 \end{frame}
 
 \subsection{AW2}
 \begin{frame}{Anwendungen 2 \cite{KrohnAW2}}{Vorstellung vergleichbarer Arbeiten}
-  Verfahren zur Topologieinferenz und -analyse
+  Datensammlung, Topologieinferenz und -analyse
   \begin{itemize}
     \item Sammlung von BGP Tabellen und -Updates und Nutzung der IRR-Datenbanken \cite{Zhang:2005:CIA:1052812.1052825}
     \item Inferenz von AS Linktypen und Einteilung in tier1, non-tier1-transit und stub \cite{Gao:2001:IAS:504611.504616}
@@ -136,6 +139,7 @@
 
   Jetzt: Validierung und Ergänzung der Topologiemodellierung
   \begin{itemize}
+    \item Passive Daten abhängig vom Standort \& oft wenig Informationen über Rückweg
     \item Über Kontakte Topologieausschnitt verifizieren (nachfragen)
     \item Mittels aktiver Verfahren diesen Ausschnitt nachvollziehen
     \item Vergleich mit modellierter Topologie
@@ -145,31 +149,50 @@
     \label{graph_diff}
     \includegraphics[width=.6\textwidth]{images/graph_diff}
   \end{figure}
-  \framebreak
+\end{frame}
 
+\subsection{Aktives Messen}
+\begin{frame}{Aktives Messen}
   Vorhanden
   \begin{itemize}
-    \item Direkter Zugang zu einem IXP
+    \item Peering am BCIX
     \item Wissen über Peerings einiger Mitglieder
     \item Modellierte Topologie aus BGP Tabellen und Updates
   \end{itemize}
   Ziel
   \begin{itemize}
-    \item Nachweis möglichst vieler Peerings mittels traceroute
-    \begin{itemize}
-      \item Mit direktem Zugang zum IXP
-      \item Zugriff auf looking glas Server im Umfeld des IXP
-    \end{itemize}
-    \item Vergleich der Peerings in modellierter Topologie, traceroute und Realität
+    \item Nachweis möglichst vieler Peerings mittels aktivem Messen
+%     \begin{itemize}
+%       \item Mit direktem Zugang zum IXP
+%       \item Später: Looking Glas Server im Umfeld des IXP
+%     \end{itemize}
+    \item Vergleich der Peerings in modellierter Topologie, Messergebnis und Realität
+    \item Integration der Messergebnisse in den Routing-Atlas
   \end{itemize}
+\end{frame}
 
+\begin{frame}{traceroute „durch“ IXPs}
+  Angelehnt an „IXPs: Mapped?“ \cite{Augustin:2009:IM:1644893.1644934}
+  \begin{itemize}
+    \item Mitglieder und Präfixe am BCIX ermitteln
+    \item traceroute in die Umgebung
+    \item Peerings nachweisen
+  \end{itemize}
+  \begin{figure}
+    \label{augustin_ixp}
+    \includegraphics[width=1\textwidth]{images/augustin_ixp}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{reverse-traceroute}
+  Angelehnt an „Reverse traceroute“ \cite{Katz-Bassett:2010:RT:1855711.1855726}
 \end{frame}
 
 \section{Ausblick}
 \begin{frame}{Ausblick}
   Projekt 2
   \begin{itemize}
-    \item in Projekt 1 entwickelte Validierung bzw. Ergänzung in Routing-Atlas integrieren
+    \item in Projekt 1 entwickelte Messergebnisse in Routing-Atlas integrieren
   \end{itemize}
   \vspace{0.3cm}
   Außerdem
@@ -218,6 +241,7 @@
     \begin{tabular}{ c p{0.8\textwidth} }
       Seite & Quelle \\ \hline
       \pageref{asgraphs}, \pageref{asngraphs2} & \url{http://inet.cpt.haw-hamburg.de/projects/routing-atlas/}\\ \hline
+      \pageref{augustin_ixp} & \url{http://www-rp.lip6.fr/~augustin/ixp/imc2009.pdf} \\ \hline
     \end{tabular}
   \end{table}
 \end{frame}

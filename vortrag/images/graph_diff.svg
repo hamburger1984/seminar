@@ -65,9 +65,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="5.6"
-     inkscape:cx="498.07117"
-     inkscape:cy="892.93462"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="327.25976"
+     inkscape:cy="1014.496"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -543,22 +543,22 @@
     <text
        xml:space="preserve"
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#f40000;fill-opacity:1;stroke:none;font-family:Sans"
-       x="494.28571"
-       y="189.17815"
+       x="490.28571"
+       y="193.17815"
        id="text6249"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan6251"
-         x="494.28571"
-         y="189.17815">!</tspan></text>
+         x="490.28571"
+         y="193.17815">?</tspan></text>
     <path
-       style="fill:#fc0000;fill-opacity:1;stroke:#b40000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter6707)"
+       style="fill:#fc0000;fill-opacity:1;stroke:#b40000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter6707)"
        d="m 474.54017,188.92019 26.27681,18.73013"
        id="path5698-7-3"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <path
-       style="fill:#1bfc00;fill-opacity:1;stroke:#b40000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter6711)"
+       style="fill:#1bfc00;fill-opacity:1;stroke:#b40000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter6711)"
        d="m 522.58493,174.08505 -9.81272,29.11469"
        id="path5871-0-4"
        inkscape:connector-type="polyline"
