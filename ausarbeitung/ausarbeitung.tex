@@ -1,0 +1,45 @@
+\input{einstellungen/grundeinstellungen} % Die stilistischen Parameter
+
+\date{31.08.2012}
+%---------------------------------------------------------------------------------------------------
+% Anfang des Schriftstücks
+%---------------------------------------------------------------------------------------------------
+\begin{document}
+
+%---------------------------------------------------------------------------------------------------
+% Erstellen des Deck- und des Titelblatts
+%---------------------------------------------------------------------------------------------------
+\createCover{Erweiterung des Routing-Atlas\\
+WiSe 2012/2013 - 28.02.2013} % Art der Arbeit
+{Andreas Krohn} % Author
+{Ausarbeitung: Seminar} % Title
+
+%---------------------------------------------------------------------------------------------------
+% Zusammenfassung}
+%---------------------------------------------------------------------------------------------------
+% \input{standard/mabstrakt.tex}
+
+%---------------------------------------------------------------------------------------------------
+% Verzeichnisse
+%---------------------------------------------------------------------------------------------------
+\tableofcontents % Inhaltsverzeichnis
+% \listoftables % Tabellenverzeichnis
+% \listoffigures % Abbildungsverzeichnis
+
+\input{kapitel/einfuehrung.tex}
+\input{kapitel/routingatlas.tex}
+\input{kapitel/ausblick.tex}
+\input{kapitel/schluss.tex}
+
+%---------------------------------------------------------------------------------------------------
+% Literaturverzeichnis
+%---------------------------------------------------------------------------------------------------
+%\bibliographystyle{dinat} % Anpassung an deutsche Zitierweise: Alphabetische Sortierung, Abkürzungen
+%\bibliographystyle{unsrt}
+\bibliographystyle{IEEEtranN} % dinat.bst fehlt, kein format für @ONLINE, gefällt mir so irgendwie besser..
+\bibliography{literatur/literatur2} % Literaturverzeichnis
+
+%---------------------------------------------------------------------------------------------------
+% Ende des Schriftstücks
+%---------------------------------------------------------------------------------------------------
+\end{document}
