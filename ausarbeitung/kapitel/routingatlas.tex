@@ -1,1 +1,18 @@
 \section{Routing-Atlas}\label{sec:routingatlas}
+
+Das Internet ist nicht an nationale Grenzen gekoppelt und ursprünglich eher als Verband autonomer Entitäten entworfen.
+Da mittlerweile ein großer Teil der Kommunikation und des Geschäftslebens das Internet nutzt, sehen Staaten seit Jahren zunehmend den Bedarf regulierend einzugreifen.
+Die Untersuchung der Topologie mit Bezug auf Staaten wird hier interessant, weil sich nur so abschätzen lässt, welche dritten Jurisdiktionen an einer Kommunikation zweier Partner beteiligt sind.
+
+Der Routing-Atlas ist ein Projekt der inet-AG in Zusammenarbeit mit dem BSI.
+Ziel ist die Untersuchung der Topologie des Internets auf AS-Ebene.
+Gegenüber vorherigen Ansätzen wurde hierbei ein besonderer Fokus auf die die Kriterien Staat und Branche gelegt.
+Dabei sollte geklärt werden, in wie weit eine nationale Klassifizierung des Internets auf IP- und AS-Ebene möglich ist, in wie weit das Routing einer Nation in sich abgeschlossen ist und wie starke Abhängigkeiten bestehen.
+
+Das Routing-Atlas Projekt nutzt verschiedene Datenquellen und führt diese zusammen.
+\begin{itemize}
+  \item Informationen zu IP-Adressblöcken und -Präfixen sowie zu ASen aus der RIPE-Datenbank~\cite{ripe-db} und vom Team Cymru~\cite{cymru}
+  \item Datensätze regionaler Monitore~\cite{ripe-ris}
+  \item Matrizen zu Shortest Path und Next Hop des NEC labs, die Rolf Winter erstellt hat~\cite{neclab-topology, Winter:2009:MIR:1577959.1577976}
+  \item Hierarchische Einordnung der ASe auf Basis von Daten, die von einer Arbeitsgruppe der UCLA um Lixia Zhang gesammelt werden~\cite{ucla-topology, Zhang:2005:CIA:1052812.1052825}
+\end{itemize}
