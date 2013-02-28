@@ -35,4 +35,9 @@ Die zwei Herausforderungen hierbei sind im Wesentlichen:
   \item Die Modellierung des policybasierten Routings durch die Wahl passender Kantengewichte. Ralf Winter gibt in seinem Paper~\cite{Winter:2009:MIR:1577959.1577976} Hinweise, aber keine ausführlichen und (leicht) nachvollziehbare Details auf seine Wahl der Kantengewichte.
 \end{itemize}
 
+Es wurden verschiedene Algorithmen zur Lösung des all-pair-shortest-path Problems implementiert.
+Dabei traten je nach Wahl der Datenstruktur für Knoten und Kanten des Graphen ab einer gewissen Größe der Datenmenge Probleme mit Laufzeit oder Speicherbedarf auf.
 
+Letztendlich ist dieser Weg obsolet, da es bereits Tools gibt, die das Problem in annehmbarer Zeit lösen, wie zum Beispiel das Paket igraph~\cite{r-igraph} für R~\cite{r}.
+
+Als kleines Subprojekt wurde die Länderzuordnung des Routing-Atlas mittels einer Geo-IP Datenbank validiert.
