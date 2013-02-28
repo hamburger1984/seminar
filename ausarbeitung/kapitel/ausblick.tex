@@ -5,4 +5,18 @@
 Die nächste Aufgabe ist ein neuer Anlauf für das Projekt 1.
 Der Fokus liegt hier auf der Untersuchung aktiver Messverfahren für die Gewinnung weiterer Informationen zu AS-Links.
 
+\subsection{Vorgehensweise}
+Zunächst soll das aktive Messen á la Augustin~\cite{Augustin:2009:IM:1644893.1644934} nachempfunden werden.
+Über Kontakte besteht die Möglichkeit an einem deutschen IXP Messungen durchzuführen.
+Weiterhin sind Ausschnitte der Topologie im Umfeld dieses IXP bekannt (oder sie können erfragt werden).
+In einem ersten Schritt sollen diese Ausschnitte mittels traceroute und anderer Verfahren vermessen werden.
+Dabei sind unter anderem die folgenden Fragen zu beantworten:
+\begin{itemize}
+  \item Antworten die gesuchten Bestandteile der Infrastruktur auf \texttt{ICMP ECHO\_REQUESTS}?
+  \item Antworten sie „wahrheitsgemäß“?
+  \item Lassen sich einzelne Lücken im traceroute auf anderen Wegen ermitteln?
+  \item Liefert traceroute im Vergleich zur bisherigen auf passiven Messungen basierenden Topologie weitere Informationen?
+\end{itemize}
 
+Das Ziel ist ein Verfahren zu entwickeln, dass zuverlässig korrekte zusätzliche Informationen liefert.
+Diese sollen in eine passende Form gebracht werden und der Datenbasis des Routing-Atlas zugefügt werden.

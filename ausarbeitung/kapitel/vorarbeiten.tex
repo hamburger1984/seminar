@@ -22,6 +22,11 @@ Weiterhin schien die Anpassung und Anwendung der Toolchain für andere Länder u
 Vortrag und Ausarbeitung~\cite{KrohnAW2} im Rahmen der Veranstaltung Anwendung 2 stellte verschiedene andere Projekte und Arbeiten zur Topologieanalyse und -inferenz vor.
 
 Besonders hervorzuheben ist hier das Paper „IXPs: Mapped?“ von Brice Augustin und Walter Willinger~\cite{Augustin:2009:IM:1644893.1644934}.
+Sie beschreiben ein aktives Messverfahren mit dessen Hilfe AS-Links entdeckt werden, die zum Teil in passiven Messungen nicht auftauchen.
+Dazu wird zunächst eine Liste bekannter IXPs samt Mitgliedern aufgebaut.
+Weiterhin werden öffentlich zugängliche Beobachtungspunkte in den jeweiligen Netzen gesucht.
+Von diesen traceroute-Servern aus wird dann versucht „durch“ die IXPs zu den jeweiligen Mitgliedern ein traceroute auszuführen.
+Enthält der so gemessene Pfad eine Sequenz @AS1 - @IXP - @AS2 (wobei @XX eine IP-Adresse im Präfix der jeweiligen Organisation XX kennzeichnet), so ist ein Link zwischen AS1 und AS2 am betreffenden IXP gefunden.
 
 \subsection{Projekt 1}
 Der erste Anlauf für Projekt 1 beschäftigte sich mit der Modellierung der Topologie des Internets auf AS-Ebene.
@@ -41,3 +46,4 @@ Dabei traten je nach Wahl der Datenstruktur für Knoten und Kanten des Graphen a
 Letztendlich ist dieser Weg obsolet, da es bereits Tools gibt, die das Problem in annehmbarer Zeit lösen, wie zum Beispiel das Paket igraph~\cite{r-igraph} für R~\cite{r}.
 
 Als kleines Subprojekt wurde die Länderzuordnung des Routing-Atlas mittels einer Geo-IP Datenbank validiert.
+
